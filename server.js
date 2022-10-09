@@ -5,6 +5,10 @@ const pokemon = require('./models/pokemon');
 const app = express()
 const PORT = 3000
 
+//====App settings
+app.set('view engine', 'jsx')
+app.engine('jsx', require ('express-react-views').createEngine())
+
 //====Listen
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
@@ -16,5 +20,6 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pokemon', (req, res) => {
-    res.send(pokemon)
+    // res.send(pokemon)
+    res.render('Index')
 })
