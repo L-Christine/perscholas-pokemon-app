@@ -1,5 +1,5 @@
 const express = require('express');
-const pokemon = require('./models/pokemon');
+const allPokemon = require('./models/pokemon');
 
 //====App init
 const app = express()
@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
 
 app.get('/pokemon', (req, res) => {
     // res.send(pokemon)
-    res.render('Index')
+    res.render('Index', {allPokemon:allPokemon})
 })
