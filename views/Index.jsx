@@ -8,13 +8,12 @@ class Index extends React.Component{
             <div>
                 <h1 style= {styles.header}>Pokedex</h1>
 
-                <ul>
-                    {allPokemon.map((pokemon, i) => {
-                        return(
-                            <li><a href={`/pokemon/${i}`}>{pokemon.name[0].toUpperCase()+pokemon.name.substring(1)}</a></li>
-                        )
-                    })}
-                </ul>
+                <a href='/pokemon/new'>Create New Pokemon</a>
+
+                <ul>{allPokemon.map((pokemon, i) =>(
+                    <li><a href={`/pokemon/${i}`}>{pokemon.name[0].toUpperCase()+pokemon.name.substring(1)}</a>
+                    </li>
+                ))}</ul>
             </div>
         )
     }
