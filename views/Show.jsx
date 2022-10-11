@@ -2,12 +2,12 @@ const React = require('react')
 
 class Show extends React.Component {
     render() {
-        const allPokemon = this.props.allPokemon
+        const seePokemon = this.props.seePokemon
         return(
             <div>
                 <h1 style= {styles.header}>Gotta Catch 'Em All</h1>
-                <h2>{allPokemon.name[0].toUpperCase()+allPokemon.name.substring(1)}</h2>
-                <img src={allPokemon.img+'.jpg'} />
+                <h2>{seePokemon.name[0].toUpperCase()+seePokemon.name.substring(1)}</h2>
+                <img src={seePokemon.img+'.jpg'} />
                 <br />
                 
                 <a href='/pokemon'>Back</a>
