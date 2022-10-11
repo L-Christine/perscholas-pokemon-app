@@ -23,3 +23,10 @@ app.get('/pokemon', (req, res) => {
     // res.send(pokemon)
     res.render('Index', {allPokemon:allPokemon})
 })
+
+app.get('/pokemon/:id', (req, res) => {
+    const {id} = req.params
+    res.render('Show', {
+        allPokemon:allPokemon[req.params.id]
+    })
+})
